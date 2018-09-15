@@ -1,0 +1,3 @@
+[submodule "Nazara"]
+	path = Nazara
+	url = https://github.com/larnin/NazaraEngine.git
