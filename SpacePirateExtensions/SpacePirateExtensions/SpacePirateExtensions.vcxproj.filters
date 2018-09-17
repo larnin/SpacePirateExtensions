@@ -30,18 +30,19 @@
     <ClInclude Include="..\Include\GameData\DataLibrary.h">
       <Filter>Fichiers d%27en-tête\GameData</Filter>
     </ClInclude>
+    <ClInclude Include="..\Include\GameData\GameData.inl">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\DataLibrary.inl">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\Config.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Source\GameData\GameData.cpp">
       <Filter>Fichiers sources\GameData</Filter>
     </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\Include\GameData\GameData.inl">
-      <Filter>Fichiers d%27en-tête\GameData</Filter>
-    </None>
-    <None Include="..\Include\GameData\DataLibrary.inl">
-      <Filter>Fichiers d%27en-tête\GameData</Filter>
-    </None>
   </ItemGroup>
 </Project>

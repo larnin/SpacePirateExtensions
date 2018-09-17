@@ -8,7 +8,15 @@
 class SPE_API GameData
 {
 public:
-	static void Initialize();
+	static void initialize();
+
+private:
+	static void initializeAllAssets();
+
+	template <typename T>
+	static void initializeAsset(const std::string & directory, const std::string & extension);
+	template<typename T>
+	static void initializeAssetSub(const std::string & baseDirectory, const std::string & subDirectory, const std::string & extension);
 };
 
 #include "GameData.inl"

@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\Include\Config.h" />
     <ClInclude Include="..\Include\GameData\DataLibrary.h" />
     <ClInclude Include="..\Include\GameData\GameData.h" />
     <ClInclude Include="..\Include\Prerequistes.h" />

@@ -10,7 +10,7 @@ template <typename T>
 class DataLibrary
 {
 public:
-	using Iterator = std::unordered_map<std::string, Nz::ObjectRef<T>>::iterator;
+	using Iterator = typename std::unordered_map<std::string, Nz::ObjectRef<T>>::iterator;
 
 	DataLibrary() = delete;
 	~DataLibrary() = delete;
@@ -28,7 +28,7 @@ public:
 	static Iterator end();
 
 private:
-	std::unordered_map<std::string, Nz::ObjectRef<T>> m_library;
+	static std::unordered_map<std::string, Nz::ObjectRef<T>> m_library;
 };
 
 #include "DataLibrary.inl"

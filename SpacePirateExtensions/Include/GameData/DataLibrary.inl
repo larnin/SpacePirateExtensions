@@ -2,16 +2,16 @@
 
 #include "DataLibrary.h"
 template <typename T>
-std::unordered_map<std::string, Nz::ObjectRef<T>> DataLibrary::m_library;
+std::unordered_map<std::string, Nz::ObjectRef<T>> DataLibrary<T>::m_library;
 
 template <typename T>
-void DataLibrary::clear()
+void DataLibrary<T>::clear()
 {
 	m_library.clear();
 }
 
 template <typename T>
-bool DataLibrary::add(const std::string & name, Nz::ObjectRef<T> object, bool replace)
+bool DataLibrary<T>::add(const std::string & name, Nz::ObjectRef<T> object, bool replace)
 {
 	if (replace || m_library.find(name) == m_library.end())
 	{
@@ -22,19 +22,19 @@ bool DataLibrary::add(const std::string & name, Nz::ObjectRef<T> object, bool re
 }
 
 template <typename T>
-bool DataLibrary::remove(const std::string & name)
+bool DataLibrary<T>::remove(const std::string & name)
 {
 	return m_library.erase(name) > 0;
 }
 
 template <typename T>
-bool DataLibrary::has(const std::string & name)
+bool DataLibrary<T>::has(const std::string & name)
 {
 	return m_library.find(name) != m_library.end();
 }
 
 template <typename T>
-Nz::ObjectRef<T> DataLibrary::get(const std::string & name)
+Nz::ObjectRef<T> DataLibrary<T>::get(const std::string & name)
 {
 	auto it = m_library.find(name);
 	if (it != m_library.end())
@@ -43,7 +43,7 @@ Nz::ObjectRef<T> DataLibrary::get(const std::string & name)
 }
 
 template <typename T>
-std::vector<std::string> DataLibrary::entries()
+std::vector<std::string> DataLibrary<T>::entries()
 {
 	std::vector<std::string> names;
 	for (const auto & e : m_library)
@@ -52,13 +52,13 @@ std::vector<std::string> DataLibrary::entries()
 }
 
 template <typename T>
-Iterator DataLibrary::begin()
+typename DataLibrary<T>::Iterator DataLibrary<T>::begin()
 {
 	return m_library.begin();
 }
 
 template <typename T>
-Iterator DataLibrary::end()
+typename DataLibrary<T>::Iterator DataLibrary<T>::end()
 {
 	return m_library.end();
 }
