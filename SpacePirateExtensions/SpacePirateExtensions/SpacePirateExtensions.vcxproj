@@ -20,11 +20,19 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Include\Config.h" />
+    <ClInclude Include="..\Include\FileSerialization\Serializable.hpp" />
+    <ClInclude Include="..\Include\GameData\AnimationData.hpp" />
+    <ClInclude Include="..\Include\GameData\AnimatorData.hpp" />
     <ClInclude Include="..\Include\GameData\DataLibrary.h" />
+    <ClInclude Include="..\Include\GameData\FrameData.hpp" />
     <ClInclude Include="..\Include\GameData\GameData.h" />
+    <ClInclude Include="..\Include\OtherLibs\Json.hpp" />
     <ClInclude Include="..\Include\Prerequistes.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\Source\GameData\AnimationData.cpp" />
+    <ClCompile Include="..\Source\GameData\AnimatorData.cpp" />
+    <ClCompile Include="..\Source\GameData\FrameData.cpp" />
     <ClCompile Include="..\Source\GameData\GameData.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +134,7 @@
       <PreprocessorDefinitions>_DEBUG;SPE_BUILD;_WINDOWS;_USRDLL;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Nicolas\Programation\c++\Projets\SpacePirateExtensions\SpacePirateExtensions\Include;C:\Users\Nicolas\Programation\c++\Projets\SpacePirateExtensions\Nazara\include;C:\Users\Nicolas\Programation\c++\Projets\SpacePirateExtensions\Nazara\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -163,6 +172,7 @@
       <PreprocessorDefinitions>NDEBUG;SPE_BUILD;_WINDOWS;_USRDLL;_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>C:\Users\Nicolas\Programation\c++\Projets\SpacePirateExtensions\SpacePirateExtensions\Include;C:\Users\Nicolas\Programation\c++\Projets\SpacePirateExtensions\Nazara\include;C:\Users\Nicolas\Programation\c++\Projets\SpacePirateExtensions\Nazara\SDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4251</DisableSpecificWarnings>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>

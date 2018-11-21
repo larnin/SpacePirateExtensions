@@ -1,4 +1,5 @@
 #include "GameData\GameData.h"
+#include "GameData\AnimationData.hpp"
 
 void GameData::initialize()
 {
@@ -8,12 +9,10 @@ void GameData::initialize()
 
 void GameData::initializeAllAssets()
 {
-	/*
-	initializeAsset<>("Animation", "anim");
-	initializeAsset<>("Animator", "ator");
-	initializeAsset<>("Image", "png");
-	initializeAsset<>("Scene", "scene");
-	initializeAsset<>("Tilemap", "tmap");
-	initializeAsset<>("Object", "object");
-	*/
+	//initializeAsset<AnimationData>("Animation", "anim");
+	//initializeAsset<>("Animator", "ator");
+	//initializeAsset<>("Image", "png");
+	//initializeAsset<>("Scene", "scene");
+	//initializeAsset<>("Tilemap", "tmap");
+	//initializeAsset<>("Object", "object");
 }

@@ -19,6 +19,12 @@
     <Filter Include="Fichiers sources\GameData">
       <UniqueIdentifier>{6848ef65-93a1-4ba6-a46e-cff7c5700b44}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\OtherLibs">
+      <UniqueIdentifier>{c7b81f09-3a51-4f45-a877-2556adb8d196}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\FileSerialization">
+      <UniqueIdentifier>{245d18d0-0572-4741-bb5e-54b7da1f2b9d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Include\Prerequistes.h">
@@ -39,9 +45,33 @@
     <ClInclude Include="..\Include\Config.h">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
+    <ClInclude Include="..\Include\OtherLibs\Json.hpp">
+      <Filter>Fichiers d%27en-tête\OtherLibs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\FileSerialization\Serializable.hpp">
+      <Filter>Fichiers d%27en-tête\FileSerialization</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\AnimationData.hpp">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\FrameData.hpp">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\AnimatorData.hpp">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Source\GameData\GameData.cpp">
+      <Filter>Fichiers sources\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GameData\AnimationData.cpp">
+      <Filter>Fichiers sources\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GameData\FrameData.cpp">
+      <Filter>Fichiers sources\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GameData\AnimatorData.cpp">
       <Filter>Fichiers sources\GameData</Filter>
     </ClCompile>
   </ItemGroup>
