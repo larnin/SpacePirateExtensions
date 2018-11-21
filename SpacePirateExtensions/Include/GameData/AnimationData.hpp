@@ -2,8 +2,8 @@
 
 #include "Prerequistes.h"
 
-#include "FileSerialization\Serializable.hpp"
-#include "GameData\FrameData.hpp"
+#include "FileSerialization/Serializable.hpp"
+#include "GameData/FrameData.hpp"
 
 #include <vector>
 

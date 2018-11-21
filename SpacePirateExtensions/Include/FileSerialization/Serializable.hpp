@@ -1,7 +1,7 @@
 #pragma once
 
 #include "Prerequistes.h"
-#include "OtherLibs\Json.hpp"
+#include "OtherLibs/Json.hpp"
 
 #include <string>
 

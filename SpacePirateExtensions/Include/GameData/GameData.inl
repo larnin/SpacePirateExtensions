@@ -2,9 +2,9 @@
 
 #include "GameData.hpp"
 #include "DataLibrary.hpp"
-#include "FileSerialization\FileOperations.hpp"
-#include <Nazara\Core\Error.hpp>
-#include <Nazara\Core\Log.hpp>
+#include "FileSerialization/FileOperations.hpp"
+#include <Nazara/Core/Error.hpp>
+#include <Nazara/Core/Log.hpp>
 #include <filesystem>
 
 namespace fs = std::experimental::filesystem;

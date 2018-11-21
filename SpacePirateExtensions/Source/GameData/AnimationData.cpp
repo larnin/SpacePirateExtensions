@@ -1,5 +1,5 @@
 
-#include "GameData\AnimationData.hpp"
+#include "GameData/AnimationData.hpp"
 #include <cassert>
 
 json AnimationData::serialize() const

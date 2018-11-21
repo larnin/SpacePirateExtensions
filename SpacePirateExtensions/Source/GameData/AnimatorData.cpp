@@ -1,4 +1,4 @@
-#include "GameData\AnimatorData.hpp"
+#include "GameData/AnimatorData.hpp"
 #include <cassert>
 
 json AnimatorStateData::serialize() const

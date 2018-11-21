@@ -1,9 +1,9 @@
 #pragma once
 
 #include "Prerequistes.h"
-#include "FileSerialization\Serializable.hpp"
+#include "FileSerialization/Serializable.hpp"
 #include "Matrix.hpp"
-#include "GameData\TileInfo.hpp"
+#include "GameData/TileInfo.hpp"
 #include <string>
 
 class SPE_API TilemapData : public Serializable

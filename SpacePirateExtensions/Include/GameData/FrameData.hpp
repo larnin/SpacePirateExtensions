@@ -1,10 +1,10 @@
 #pragma once
 
 #include "Prerequistes.h"
-#include "FileSerialization\Serializable.hpp"
+#include "FileSerialization/Serializable.hpp"
 
-#include <Nazara\Math\Vector2.hpp>
-#include <Nazara\Math\Rect.hpp>
+#include <Nazara/Math/Vector2.hpp>
+#include <Nazara/Math/Rect.hpp>
 
 class SPE_API FrameData : public Serializable
 {

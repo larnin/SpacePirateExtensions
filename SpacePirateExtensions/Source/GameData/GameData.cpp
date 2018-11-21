@@ -1,7 +1,7 @@
-#include "GameData\GameData.hpp"
-#include "GameData\AnimationData.hpp"
-#include "GameData\AnimatorData.hpp"
-#include "GameData\TilemapData.hpp"
+#include "GameData/GameData.hpp"
+#include "GameData/AnimationData.hpp"
+#include "GameData/AnimatorData.hpp"
+#include "GameData/TilemapData.hpp"
 
 void GameData::initialize()
 {
