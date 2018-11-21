@@ -25,21 +25,12 @@
     <Filter Include="Fichiers d%27en-tête\FileSerialization">
       <UniqueIdentifier>{245d18d0-0572-4741-bb5e-54b7da1f2b9d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers sources\FileSerialization">
+      <UniqueIdentifier>{03abafb1-639c-45ee-b502-4c40e3eb9d06}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Include\Prerequistes.h">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Include\GameData\GameData.h">
-      <Filter>Fichiers d%27en-tête\GameData</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Include\GameData\DataLibrary.h">
-      <Filter>Fichiers d%27en-tête\GameData</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Include\GameData\GameData.inl">
-      <Filter>Fichiers d%27en-tête</Filter>
-    </ClInclude>
-    <ClInclude Include="..\Include\GameData\DataLibrary.inl">
       <Filter>Fichiers d%27en-tête</Filter>
     </ClInclude>
     <ClInclude Include="..\Include\Config.h">
@@ -60,6 +51,33 @@
     <ClInclude Include="..\Include\GameData\AnimatorData.hpp">
       <Filter>Fichiers d%27en-tête\GameData</Filter>
     </ClInclude>
+    <ClInclude Include="..\Include\Matrix.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\TileInfo.hpp">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\GameData.hpp">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\DataLibrary.hpp">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\EnumIterator.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\TilemapData.hpp">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\DataLibrary.inl">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\GameData.inl">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\FileSerialization\FileOperations.hpp">
+      <Filter>Fichiers d%27en-tête\FileSerialization</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Source\GameData\GameData.cpp">
@@ -73,6 +91,15 @@
     </ClCompile>
     <ClCompile Include="..\Source\GameData\AnimatorData.cpp">
       <Filter>Fichiers sources\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GameData\TileInfo.cpp">
+      <Filter>Fichiers sources\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GameData\TilemapData.cpp">
+      <Filter>Fichiers sources\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\FileSerialization\FileOperations.cpp">
+      <Filter>Fichiers sources\FileSerialization</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

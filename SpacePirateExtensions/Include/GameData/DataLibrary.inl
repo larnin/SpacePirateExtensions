@@ -1,8 +1,10 @@
 #pragma once
 
-#include "DataLibrary.h"
+#include "DataLibrary.hpp"
+#include <cassert>
+
 template <typename T>
-std::unordered_map<std::string, Nz::ObjectRef<T>> DataLibrary<T>::m_library;
+std::unordered_map<std::string, T> DataLibrary<T>::m_library;
 
 template <typename T>
 void DataLibrary<T>::clear()
@@ -11,7 +13,7 @@ void DataLibrary<T>::clear()
 }
 
 template <typename T>
-bool DataLibrary<T>::add(const std::string & name, Nz::ObjectRef<T> object, bool replace)
+bool DataLibrary<T>::add(const std::string & name, T object, bool replace)
 {
 	if (replace || m_library.find(name) == m_library.end())
 	{
@@ -34,12 +36,12 @@ bool DataLibrary<T>::has(const std::string & name)
 }
 
 template <typename T>
-Nz::ObjectRef<T> DataLibrary<T>::get(const std::string & name)
+const T & DataLibrary<T>::get(const std::string & name)
 {
-	auto it = m_library.find(name);
-	if (it != m_library.end())
-		return it->second;
-	return nullptr;
+	const auto it = m_library.find(name);
+	assert(it != m_library.end());
+	
+	return it->second;
 }
 
 template <typename T>

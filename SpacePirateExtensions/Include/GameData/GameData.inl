@@ -1,7 +1,10 @@
 #pragma once
 
-#include "GameData.h"
-#include "DataLibrary.h"
+#include "GameData.hpp"
+#include "DataLibrary.hpp"
+#include "FileSerialization\FileOperations.hpp"
+#include <Nazara\Core\Error.hpp>
+#include <Nazara\Core\Log.hpp>
 #include <filesystem>
 
 namespace fs = std::experimental::filesystem;
@@ -11,46 +14,41 @@ void GameData::initializeAsset(const std::string & directory, const std::string 
 {
 	DataLibrary<T>::clear();
 
-	initializeAssetSub(directory, "", extension);
+	initializeAssetSub<T>(directory, "", extension);
 }
 
 template<typename T>
-static void initializeAssetSub(const std::string & baseDirectory, const std::string & subDirectory, const std::string & extension)
+void GameData::initializeAssetSub(const std::string & baseDirectory, const std::string & subDirectory, const std::string & extension)
 {
-	fs::path path = baseDirectory / subDirectory / "";
-	unsigned int pathSize = path.string().size();
+	fs::path path = fs::path(baseDirectory) / subDirectory / "";
+	auto pathSize = path.string().size();
 	for (auto & p : fs::directory_iterator(path))
 	{
-		if (p->is_directory())
+		if (fs::is_directory(p))
 		{
-			std::string s = p->path.string();
+			std::string s = p.path().string();
 			s.erase(0, pathSize);
 
-			initializeAssetSub(baseDirectory, subDirectory + "/" + s);
+			initializeAssetSub<T>(baseDirectory, subDirectory + "/" + s, extension);
 		}
-		else if (p->is_regular_file())
+		else if (fs::is_regular_file(p))
 		{
-			std::string s = p->path.string();
+			std::string s = p.path().string();
 			s.erase(0, pathSize);
 			if (!subDirectory.empty())
-				s = subDirectory + "/" + s;
+				s = subDirectory + "/" + s + "." + extension;
 
-			Nz::ObjectRef<T> resource = T::New();
-			if (!resource)
+			const auto & data = readFile(p.path().string());
+			T t;
+			if (!t.deserialize(data))
 			{
-				NazaraError("Failed to create resource");
-				return;
-			}
-
-			if (!resource->LoadFromFile(s))
-			{
-				NazaraError("Failed to load resource from file: " + s);
+				NazaraError("Failed to load resource from file: " + p.path().string());
 				return;
 			}
 
 			NazaraDebug("Loaded resource from file " + s);
 
-			DataLibrary<T>::add(s, resource);
+			DataLibrary<T>::add(s, t);
 		}
 	}
 }
