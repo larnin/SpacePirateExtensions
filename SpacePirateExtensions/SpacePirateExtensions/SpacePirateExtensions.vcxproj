@@ -28,6 +28,10 @@
     <ClInclude Include="..\Include\GameData\DataLibrary.hpp" />
     <ClInclude Include="..\Include\GameData\FrameData.hpp" />
     <ClInclude Include="..\Include\GameData\GameData.hpp" />
+    <ClInclude Include="..\Include\GameData\ObjectData.hpp" />
+    <ClInclude Include="..\Include\GameData\ObjectPropertyData.hpp" />
+    <ClInclude Include="..\Include\GameData\ObjectValues\ObjectValueBase.hpp" />
+    <ClInclude Include="..\Include\GameData\TextureData.hpp" />
     <ClInclude Include="..\Include\GameData\TileInfo.hpp" />
     <ClInclude Include="..\Include\GameData\TilemapData.hpp" />
     <ClInclude Include="..\Include\Matrix.hpp" />
@@ -40,6 +44,9 @@
     <ClCompile Include="..\Source\GameData\AnimatorData.cpp" />
     <ClCompile Include="..\Source\GameData\FrameData.cpp" />
     <ClCompile Include="..\Source\GameData\GameData.cpp" />
+    <ClCompile Include="..\Source\GameData\ObjectData.cpp" />
+    <ClCompile Include="..\Source\GameData\ObjectPropertyData.cpp" />
+    <ClCompile Include="..\Source\GameData\ObjectValues\ObjectValueBase.cpp" />
     <ClCompile Include="..\Source\GameData\TileInfo.cpp" />
     <ClCompile Include="..\Source\GameData\TilemapData.cpp" />
   </ItemGroup>

@@ -28,6 +28,12 @@
     <Filter Include="Fichiers sources\FileSerialization">
       <UniqueIdentifier>{03abafb1-639c-45ee-b502-4c40e3eb9d06}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers d%27en-tête\GameData\ObjectValues">
+      <UniqueIdentifier>{712f865e-5681-45b7-8eec-189c5de9dbd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\GameData\ObjectValues">
+      <UniqueIdentifier>{04271e41-2da3-45c7-8722-ba9e613027e1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Include\Prerequistes.h">
@@ -78,6 +84,18 @@
     <ClInclude Include="..\Include\FileSerialization\FileOperations.hpp">
       <Filter>Fichiers d%27en-tête\FileSerialization</Filter>
     </ClInclude>
+    <ClInclude Include="..\Include\GameData\ObjectData.hpp">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\TextureData.hpp">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\ObjectPropertyData.hpp">
+      <Filter>Fichiers d%27en-tête\GameData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Include\GameData\ObjectValues\ObjectValueBase.hpp">
+      <Filter>Fichiers d%27en-tête\GameData\ObjectValues</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\Source\GameData\GameData.cpp">
@@ -100,6 +118,15 @@
     </ClCompile>
     <ClCompile Include="..\Source\FileSerialization\FileOperations.cpp">
       <Filter>Fichiers sources\FileSerialization</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GameData\ObjectData.cpp">
+      <Filter>Fichiers sources\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GameData\ObjectPropertyData.cpp">
+      <Filter>Fichiers sources\GameData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Source\GameData\ObjectValues\ObjectValueBase.cpp">
+      <Filter>Fichiers sources\GameData\ObjectValues</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

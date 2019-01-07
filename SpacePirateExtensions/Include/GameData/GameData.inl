@@ -3,6 +3,7 @@
 #include "GameData.hpp"
 #include "DataLibrary.hpp"
 #include "FileSerialization/FileOperations.hpp"
+#include "GameData/TextureData.hpp"
 #include <Nazara/Core/Error.hpp>
 #include <Nazara/Core/Log.hpp>
 #include <filesystem>
@@ -38,17 +39,40 @@ void GameData::initializeAssetSub(const std::string & baseDirectory, const std::
 			if (!subDirectory.empty())
 				s = subDirectory + "/" + s + "." + extension;
 
-			const auto & data = readFile(p.path().string());
-			T t;
-			if (!t.deserialize(data))
-			{
-				NazaraError("Failed to load resource from file: " + p.path().string());
-				return;
-			}
-
-			NazaraDebug("Loaded resource from file " + s);
-
-			DataLibrary<T>::add(s, t);
+			loadAsset<T>(p.path().string(), s);
 		}
 	}
+}
+
+template<typename T>
+void GameData::loadAsset(const std::string & filename, const std::string & name)
+{
+	const auto & data = readFile(filename);
+	T t;
+	if (!t.deserialize(data))
+	{
+		NazaraError("Failed to load resource from file: " + filename);
+		return;
+	}
+
+	NazaraDebug("Loaded resource " + name);
+
+	DataLibrary<T>::add(name, t);
+}
+
+template <>
+void GameData::loadAsset<TextureData>(const std::string & filename, const std::string & name)
+{
+	auto t = Nz::Texture::LoadFromFile(filename);
+	if(!t)
+	{
+		NazaraError("Failed to load image from file: " + filename);
+		return;
+	}
+
+	TextureData tex{ t };
+
+	NazaraDebug("Loaded resource " + name);
+
+	DataLibrary<TextureData>::add(name, tex);
 }

@@ -17,6 +17,8 @@ private:
 	static void initializeAsset(const std::string & directory, const std::string & extension);
 	template<typename T>
 	static void initializeAssetSub(const std::string & baseDirectory, const std::string & subDirectory, const std::string & extension);
+	template<typename T>
+	static void loadAsset(const std::string & filename, const std::string & name);
 };
 
 #include "GameData.inl"
